@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-shell {
   min-height: 100vh;
   display: flex;
+  align-items: stretch;
+  color: #1a1a1a;
+  background: #f4f6f9;
+}
+
+.app-nav {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 1.25rem 1rem;
+  background: #1e293b;
+  color: #e2e8f0;
+  border-right: 1px solid #334155;
+}
+
+.app-nav-title {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.app-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   flex-direction: column;
+  gap: 0.35rem;
+}
+
+.app-nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: #cbd5e1;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.app-nav-link:hover {
+  background: #334155;
+  color: #f8fafc;
+}
+
+.app-nav-link.is-active {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.app-nav-link:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow: auto;
+}
+
+/* Contenido de cada ejemplo */
+.example-panel {
+  max-width: 42rem;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem 2.25rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.example-panel h1 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.example-panel p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.example-panel code {
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: #f1f5f9;
+  border-radius: 4px;
+  color: #0f172a;
+}
+
+.example-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.example-note {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.example-counter-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1.25rem 0;
+}
+
+.example-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.example-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.example-actions button:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.example-actions button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-text {
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  color: #1e293b;
+  cursor: pointer;
+  font-size: 0.95rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-text.is-done {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-nav {
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid #334155;
+  }
+
+  .app-nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .app-nav-link {
+    width: auto;
+  }
+
+  .app-main {
+    padding: 1.25rem 1rem;
   }
 }
