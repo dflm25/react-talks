@@ -4,11 +4,16 @@ const INITIAL_WORDS = ["Carlos", "Ana", "Juan", "Maria", "Pedro", "Alberto", "Fe
 
 function UseMemoSort() {
     const [update, setUpdate] = useState(0);
+    const [list, setList] = useState(INITIAL_WORDS);
 
     const sortedWords = useMemo(() => {
         console.log("Calculando sortedWords");
-        return [...INITIAL_WORDS].sort();
-    }, []);
+        return [...list].sort();
+    }, [list]);
+
+    const addWord = () => {
+        setList([...list, "Luis"]);
+    }
 
     return (
         <section className="example-panel">
@@ -24,6 +29,7 @@ function UseMemoSort() {
         <button type="button" onClick={() => setUpdate((u) => u + 1)}>
             Cambiar estado irrelevante (fuerza re-render del padre) {update}
         </button>
+        <button type="button" onClick={addWord}>Agregar palabra</button>
         </section>
     );
 }

@@ -27,6 +27,7 @@ function ControlledUncontrolledExample() {
 
 function ControlledField() {
   const [text, setText] = useState('');
+  console.log("ControlledField", text);
 
   return (
     <section className="example-panel memo-panel">

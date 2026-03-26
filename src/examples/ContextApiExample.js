@@ -54,6 +54,8 @@ function IndicadorTemaProfundo() {
 }
 
 function Nivel2() {
+  const { theme } = useTheme();
+  console.log("Nivel 2", theme);
   return (
     <div className="context-nested context-nested-2">
       <span className="context-nested-label">Nivel 2</span>
@@ -63,6 +65,8 @@ function Nivel2() {
 }
 
 function Nivel3() {
+  const { theme } = useTheme();
+  console.log("Nivel 3", theme);
   return (
     <div className="context-nested context-nested-3">
       <span className="context-nested-label">Nivel 3</span>

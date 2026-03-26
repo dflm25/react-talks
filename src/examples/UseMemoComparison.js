@@ -42,6 +42,7 @@ function TotalSinMemo({ numbers }) {
 
 /** Solo recalcula cuando cambia la referencia o contenido relevante de numbers. */
 function TotalConMemo({ numbers }) {
+  const [page, setPage] = useState(1);
   const rendersRef = useRef(0);
   const reduceRunsRef = useRef(0);
 
@@ -51,7 +52,7 @@ function TotalConMemo({ numbers }) {
     console.log("Calculando total con useMemo");
     reduceRunsRef.current += 1;
     return sumNumbers(numbers);
-  }, [numbers]);
+  }, [numbers])
 
   return (
     <section className="example-panel memo-panel">

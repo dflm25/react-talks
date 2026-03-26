@@ -1,11 +1,14 @@
 import React from 'react';
 import { productos } from './constants';
+const nombre = "Carlos";
 
 function JsxBasics() {
+
   return (
     <>
       <section className="example-panel">
         <h1>Uso de JSX</h1>
+        {nombre}
         <p>
           Las llaves <code>{'{ }'}</code> interpolan JavaScript en el marcado.
         </p>
