@@ -202,6 +202,222 @@
   color: #64748b;
 }
 
+.memo-demo {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.memo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.memo-controls button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.memo-controls button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.memo-tick {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.memo-link-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.memo-link-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.memo-array {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.memo-panels {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .memo-panels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.memo-panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.memo-metrics {
+  margin-bottom: 0.75rem;
+}
+
+.memo-total {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.callback-padre-controls {
+  margin-bottom: 1rem;
+}
+
+.callback-child {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.callback-child-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.callback-child-btn {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.callback-child-btn:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.context-api-demo {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.context-theme-surface.is-light {
+  --ctx-fg: #0f172a;
+  --ctx-muted: #475569;
+  --ctx-bg: #f8fafc;
+  --ctx-border: #e2e8f0;
+  --ctx-code-bg: #f1f5f9;
+}
+
+.context-theme-surface.is-dark {
+  --ctx-fg: #f1f5f9;
+  --ctx-muted: #94a3b8;
+  --ctx-bg: #1e293b;
+  --ctx-border: #334155;
+  --ctx-code-bg: #334155;
+}
+
+.context-theme-surface {
+  color: var(--ctx-fg);
+  background: var(--ctx-bg);
+  border-color: var(--ctx-border);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.context-theme-surface h2 {
+  color: var(--ctx-fg);
+}
+
+.context-theme-surface p {
+  color: var(--ctx-muted);
+}
+
+.context-theme-surface code {
+  background: var(--ctx-code-bg);
+  color: var(--ctx-fg);
+}
+
+.context-theme-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--ctx-border);
+  background: var(--ctx-bg);
+  color: var(--ctx-fg);
+  cursor: pointer;
+}
+
+.context-theme-surface.is-dark .context-theme-actions button {
+  background: #334155;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+.context-theme-actions button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.context-nested {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed var(--ctx-border);
+  border-radius: 8px;
+}
+
+.context-nested-2 {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.context-nested-3 {
+  margin-top: 0.75rem;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+.context-nested-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ctx-muted);
+  margin-bottom: 0.5rem;
+}
+
+.context-nested-deep {
+  margin-top: 0.5rem;
+}
+
+.context-theme-label {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--ctx-fg);
+}
+
 @media (max-width: 720px) {
   .app-shell {
     flex-direction: column;
