@@ -418,6 +418,262 @@
   color: var(--ctx-fg);
 }
 
+.compound-tabs-demo {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.compound-tabs-snippet {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  text-align: left;
+  overflow-x: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.compound-tabs-live-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.compound-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.compound-tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px 10px 0 0;
+}
+
+.compound-tab {
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.compound-tab:hover {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.compound-tab.is-active {
+  background: #fff;
+  color: #0f172a;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.compound-tab:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.compound-tabs-panels {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background: #fff;
+  min-height: 6rem;
+}
+
+.compound-tab-panel[hidden] {
+  display: none;
+}
+
+.compound-tab-panel-lead {
+  margin: 0;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.fetch-demo {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.fetch-demo-controls {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fetch-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fetch-demo-url {
+  margin-bottom: 0;
+  word-break: break-all;
+}
+
+.fetch-demo-result h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.fetch-loading {
+  margin: 0;
+  color: #64748b;
+  font-style: italic;
+}
+
+.fetch-error {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.fetch-error pre {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.fetch-success strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.fetch-json {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  text-align: left;
+  overflow-x: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.controlled-demo {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.controlled-lead {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.controlled-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.controlled-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.controlled-input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.controlled-mirror {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.hoc-demo {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.hoc-lead {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.hoc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hoc-plain-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.hoc-fancy-btn {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+}
+
+.hoc-fancy-btn:hover {
+  filter: brightness(1.06);
+}
+
+.hoc-fancy-btn:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
 @media (max-width: 720px) {
   .app-shell {
     flex-direction: column;

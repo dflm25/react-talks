@@ -6,6 +6,10 @@ import UseMemoComparison from './examples/UseMemoComparison';
 import UseMemoSort from './examples/UseMemoSort';
 import UseCallbackExample from './examples/UseCallbackExample';
 import ContextApiExample from './examples/ContextApiExample';
+import CompoundTabsExample from './examples/CompoundTabsExample';
+import UseFetchExample from './examples/UseFetchExample';
+import ControlledUncontrolledExample from './examples/ControlledUncontrolledExample';
+import HocExample from './examples/HocExample';
 
 const SECTIONS = [
   { id: 'jsx', label: 'Uso de JSX', Component: JsxBasics },
@@ -14,6 +18,14 @@ const SECTIONS = [
   { id: 'use-memo-sort', label: 'useMemo para ordenar', Component: UseMemoSort },
   { id: 'use-callback', label: 'useCallback', Component: UseCallbackExample },
   { id: 'context-api', label: 'Context API', Component: ContextApiExample },
+  { id: 'compound-tabs', label: 'Compound: Tabs', Component: CompoundTabsExample },
+  { id: 'use-fetch', label: 'useFetch (custom hook)', Component: UseFetchExample },
+  {
+    id: 'controlled-uncontrolled',
+    label: 'Controlado / no controlado',
+    Component: ControlledUncontrolledExample,
+  },
+  { id: 'hoc', label: 'HOC (estilo en botón)', Component: HocExample },
 ];
 
 function App() {

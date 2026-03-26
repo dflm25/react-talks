@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# React Talks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Repositorio de ejemplos para una charla de React.
 
-## Available Scripts
+Este proyecto esta creado con **Create React App** e incluye varios ejemplos practicos para explicar conceptos de React de forma incremental:
 
-In the project directory, you can run:
+- JSX
+- `useState` (contador y todo list)
+- `useReducer`
+- `useMemo`
+- `useCallback`
+- Context API
+- Compound Components (Tabs)
+- Custom hook `useFetch`
+- Storybook para mostrar componentes y ejemplos
 
-### `npm start`
+## Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js 18+ recomendado
+- npm (incluido con Node.js)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como correr el proyecto
 
-### `npm test`
+1. Instalar dependencias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+2. Levantar la app en desarrollo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Abrir en el navegador:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [http://localhost:3000](http://localhost:3000)
 
-### `npm run eject`
+## Como correr Storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run storybook
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Storybook abre en:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [http://localhost:6006](http://localhost:6006)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Build de produccion
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Genera la carpeta `build/`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Build estatico de Storybook
 
-### Code Splitting
+```bash
+npm run build-storybook
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Genera la carpeta `storybook-static/`.
 
-### Analyzing the Bundle Size
+## Estructura principal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `src/App.js`: menu para navegar entre ejemplos.
+- `src/examples/`: ejemplos de hooks, context y patrones.
+- `src/hooks/useFetch.js`: custom hook para fetch con `loading`, `data` y `error`.
+- `.storybook/`: configuracion de Storybook.
 
-### Making a Progressive Web App
+## Notas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Si `npm` usa un registro privado y falla la instalacion, puedes forzar el publico:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm_config_registry=https://registry.npmjs.org/ npm install
+```
